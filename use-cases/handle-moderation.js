@@ -1,5 +1,5 @@
 export default function makeHandleModeration() {
-  return function handleModeration({ dateParam }) {
+  return function handleModeration(dateParam ) {
     if(/\D/.test(dateParam)) {
       return {
         unix: new Date(dateParam).getTime(),

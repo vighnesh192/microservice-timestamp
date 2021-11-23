@@ -1,4 +1,4 @@
-import buildMakeTimestamp from './timestamp';
+import buildMakeTimestamp from './timestamp.js';
 
 const makeTimestamp = buildMakeTimestamp();
 

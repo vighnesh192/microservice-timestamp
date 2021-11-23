@@ -1,8 +1,9 @@
-import makeTimestamp from '../timestamp'
-export default function makeGetTimestamp({ handleModeration }) {
+import makeTimestamp from '../timestamp/index.js'
+export default function makeGetTimestamp(handleModeration) {
     return function getTimestamp({ dateParam }) {
       // Pass dateParam to handleModeration use-case
       const moderated = handleModeration(dateParam);
+      console.log(moderated)
       try {
         // Pass moderated date to entity
         const timestamp = makeTimestamp(moderated); 
@@ -12,7 +13,7 @@ export default function makeGetTimestamp({ handleModeration }) {
         }
       } 
       catch(error) {
-        return { error }
+        return { error: "Invalid Date" }
       }
     }
 }

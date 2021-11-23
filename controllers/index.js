@@ -1,6 +1,6 @@
-import makeGetTimestampController from './get-timestamp-controller';
+import makeGetTimestampController from './get-timestamp-controller.js';
 
-import getTimestamp from '../use-cases';
+import getTimestamp from '../use-cases/index.js';
 
 const getTimestampController = makeGetTimestampController({ getTimestamp })
 

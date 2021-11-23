@@ -1,6 +1,8 @@
-import makeGetTimestamp from './get-timestamp'
-import makeHandleModeration from './handle-moderation'
+import makeGetTimestamp from './get-timestamp.js'
+import makeHandleModeration from './handle-moderation.js'
 
-const getTimestamp = makeGetTimestamp(makeHandleModeration);
+const handleModeration = makeHandleModeration();
+
+const getTimestamp = makeGetTimestamp(handleModeration);
 
 export default getTimestamp;
